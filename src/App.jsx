@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code2, User, ChevronDown, Moon, Sun, Database, FileJson, Terminal, Figma as FigmaIcon, Monitor as MonitorCode, Boxes, GitBranch, MessageSquare, Wrench, Home, FileText } from 'lucide-react';
-import carsadaImage from './assets/Carsada.png';
+import { 
+  Github, Linkedin, Mail, ExternalLink, Code2, User, ChevronDown, Moon, Sun, 
+  Database, FileJson, Terminal, Figma as FigmaIcon, Monitor as MonitorCode, 
+  Boxes, GitBranch, MessageSquare, Wrench, Home, FileText, Flame, Feather, Smartphone, MonitorSmartphone
+} from 'lucide-react';
+
+import carsadaImage from './assets/carsada.jpg';
 import tardyCareImage from './assets/TardyCare.png';
 import smartPetFeederImage from './assets/Smart Pet Feeder with app base controll integration.jpg';
 import leafyKitchenImage from './assets/The Leafy Kitchen Website.jpg';
-import profileImage from './assets/me.jpg';
+import profileImage from './assets/AI_ME.png';
 import acanaviImage from './assets/acanavi (2).png';
 
 function App() {
@@ -12,8 +17,8 @@ function App() {
 
   const [text, setText] = useState('');
   const titles = [
-    "Full Stack Developer",
-    "IoT Developer",
+    "Software Developer",
+    "Software Architecture",
     "UI/UX Designer"
   ];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -74,9 +79,10 @@ function App() {
       { name: 'Python', icon: <Terminal className="w-6 h-6" /> },
       { name: 'Java', icon: <MonitorCode className="w-6 h-6" /> },
       { name: 'C++', icon: <Code2 className="w-6 h-6" /> },
-      { name: 'PHP', icon: <Terminal className="w-6 h-6" /> }
+      { name: 'Flutter', icon: <Feather className="w-6 h-6" /> },
     ],
     'Web Technologies': [
+      { name: 'Firebase', icon: <Flame className="w-6 h-6" /> },
       { name: 'Node.js', icon: <Terminal className="w-6 h-6" /> },
       { name: 'React', icon: <Boxes className="w-6 h-6" /> },
       { name: 'Express.js', icon: <Terminal className="w-6 h-6" /> }
@@ -89,7 +95,10 @@ function App() {
       { name: 'Git', icon: <GitBranch className="w-6 h-6" /> },
       { name: 'GitHub', icon: <Github className="w-6 h-6" /> },
       { name: 'Postman', icon: <MessageSquare className="w-6 h-6" /> },
-      { name: 'Figma', icon: <FigmaIcon className="w-6 h-6" /> }
+      { name: 'Figma', icon: <FigmaIcon className="w-6 h-6" /> },
+      { name: 'Android Studio', icon: <Smartphone className="w-6 h-6" /> },
+
+      
     ]
   };
 
@@ -100,7 +109,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
-              {/* Simplified JC Logo */}
+              {}
               <div className="relative group">
                 <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text hover:from-cyan-300 hover:via-blue-300 hover:to-purple-300 transition-all duration-300">
                   JC
@@ -137,7 +146,7 @@ function App() {
               </button>
             </div>
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/MyNameIsCee" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors border border-cyan-500/20 hover:border-cyan-500/40"
@@ -185,13 +194,13 @@ function App() {
             </div>
           </div>
           <div className="flex gap-4 justify-center mb-12">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <a href="https://github.com/MyNameIsCee" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <a href="https://linkedin.com/in/jaycee-decepida-33abbb376" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:your.email@example.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <a href="https://gmail.com@jayceealan01@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               <Mail size={24} />
             </a>
           </div>
@@ -230,7 +239,7 @@ function App() {
                   <div className="bg-gray-50 dark:bg-gray-700/50 rounded-2xl p-6 border border-cyan-100 dark:border-cyan-900/30 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 dark:text-white">
                       <Code2 className="text-cyan-400" />
-                      Frontend Development
+                       Software Developer
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-4">
                       Crafting responsive and intuitive user interfaces using modern web technologies.
@@ -239,6 +248,7 @@ function App() {
                       <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">React</span>
                       <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">JavaScript</span>
                       <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">Tailwind CSS</span>
+                      <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">Flutter</span>
                     </div>
                   </div>
 
@@ -255,7 +265,7 @@ function App() {
                       <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">Express</span>
                       <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">MongoDB</span>
                       <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">IoT Design</span>
-                      <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">CISCO</span>
+                      <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">Firebase</span>
                       <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 rounded-full text-sm">Networking</span>
                     </div>
                   </div>
@@ -329,14 +339,14 @@ function App() {
                 image: acanaviImage,
                 description: "Acanavi helps students and teachers seamlessly track grades, quiz scores, and academic progress-all in one place.",
                 docsUrl: "https://acanavi-alpha-test.onrender.com/",
-                docsName: "Live Demo"
+                docsName: "View Page"
               },
               {
                 title: "Carsada",
                 image: carsadaImage,
-                description: "A user-friendly jeepney navigation app featuring real-time route tracking, interactive maps, and step-by-step directions. Includes multi-language support, fare estimates, and mobile payment integration for a seamless commuting experience.",
-                docsUrl: "/src/docs/CARSADA Presentation (1).pdf",
-                docsName: "Carsada Documentation"
+                description: "Your everyday navigational app for jeepneys",
+                docsUrl: "https://carsadawebsite.vercel.app/",
+                docsName: "View Page"
               },
               {
                 title: "TardyCare",
@@ -384,7 +394,7 @@ function App() {
                         </>
                       ) : (
                         <>
-                          View Docs <FileText size={16} />
+                          Visit Site <FileText size={16} />
                         </>
                       )}
                     </a>
@@ -423,7 +433,7 @@ function App() {
       {/* Footer */}
       <footer className="py-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 transition-colors">
         <div className="container mx-auto px-4 text-center text-gray-300">
-          <p>© 2024 Jaycee Decepida. All rights reserved.</p>
+          <p>© 2025 Jaycee Decepida. All rights reserved.</p>
         </div>
       </footer>
     </div>
